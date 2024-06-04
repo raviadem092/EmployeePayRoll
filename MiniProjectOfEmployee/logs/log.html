@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Log4j2 HTML Log</title>
+<style type="text/css">
+<!--
+body, table {font-family:arial,sans-serif; font-size: medium
+;}th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade="noshade">
+Log session start time Fri May 31 19:52:39 IST 2024<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Logger</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>1576</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter logger">org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter</td>
+<td>LoggingFailureAnalysisReporter.java:40</td>
+<td title="Message"><br /><br />***************************<br />APPLICATION FAILED TO START<br />***************************<br /><br />Description:<br /><br />An attempt was made to call a method that does not exist. The attempt was made from the following location:<br /><br />    org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:222)<br /><br />The following method did not exist:<br /><br />    'void org.apache.logging.log4j.util.PropertiesUtil.addPropertySource(org.apache.logging.log4j.util.PropertySource)'<br /><br />The calling method's class, org.springframework.boot.logging.log4j2.Log4J2LoggingSystem, was loaded from the following location:<br /><br />    jar:file:/C:/Users/ravia/.m2/repository/org/springframework/boot/spring-boot/3.3.0/spring-boot-3.3.0.jar!/org/springframework/boot/logging/log4j2/Log4J2LoggingSystem.class<br /><br />The called method's class, org.apache.logging.log4j.util.PropertiesUtil, is available from the following locations:<br /><br />    jar:file:/C:/Users/ravia/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar!/org/apache/logging/log4j/util/PropertiesUtil.class<br /><br />The called method's class hierarchy was loaded from the following locations:<br /><br />    org.apache.logging.log4j.util.PropertiesUtil: file:/C:/Users/ravia/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar<br /><br /><br />Action:<br /><br />Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.logging.log4j2.Log4J2LoggingSystem and org.apache.logging.log4j.util.PropertiesUtil<br /></td>
+</tr>
+
+<tr>
+<td>1580</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.rk.MiniProjectOfEmployeeApplication logger">com.rk.MiniProjectOfEmployeeApplication</td>
+<td>MiniProjectOfEmployeeApplication.java:32</td>
+<td title="Message">Exception encountered</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : small;" colspan="6">java.lang.IllegalStateException: java.lang.NoSuchMethodError: 'void org.apache.logging.log4j.util.PropertiesUtil.addPropertySource(org.apache.logging.log4j.util.PropertySource)'
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at com.rk.MiniProjectOfEmployeeApplication.main(MiniProjectOfEmployeeApplication.java:22)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.lang.NoSuchMethodError: 'void org.apache.logging.log4j.util.PropertiesUtil.addPropertySource(org.apache.logging.log4j.util.PropertySource)'
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:335)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 19 more
+</td></tr>
+
+<tr>
+<td>1672</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter logger">org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter</td>
+<td>LoggingFailureAnalysisReporter.java:40</td>
+<td title="Message"><br /><br />***************************<br />APPLICATION FAILED TO START<br />***************************<br /><br />Description:<br /><br />An attempt was made to call a method that does not exist. The attempt was made from the following location:<br /><br />    org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:222)<br /><br />The following method did not exist:<br /><br />    'void org.apache.logging.log4j.util.PropertiesUtil.addPropertySource(org.apache.logging.log4j.util.PropertySource)'<br /><br />The calling method's class, org.springframework.boot.logging.log4j2.Log4J2LoggingSystem, was loaded from the following location:<br /><br />    jar:file:/C:/Users/ravia/.m2/repository/org/springframework/boot/spring-boot/3.3.0/spring-boot-3.3.0.jar!/org/springframework/boot/logging/log4j2/Log4J2LoggingSystem.class<br /><br />The called method's class, org.apache.logging.log4j.util.PropertiesUtil, is available from the following locations:<br /><br />    jar:file:/C:/Users/ravia/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar!/org/apache/logging/log4j/util/PropertiesUtil.class<br /><br />The called method's class hierarchy was loaded from the following locations:<br /><br />    org.apache.logging.log4j.util.PropertiesUtil: file:/C:/Users/ravia/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar<br /><br /><br />Action:<br /><br />Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.logging.log4j2.Log4J2LoggingSystem and org.apache.logging.log4j.util.PropertiesUtil<br /></td>
+</tr>
+
+<tr>
+<td>1676</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.rk.MiniProjectOfEmployeeApplication logger">com.rk.MiniProjectOfEmployeeApplication</td>
+<td>MiniProjectOfEmployeeApplication.java:34</td>
+<td title="Message">Exception encountered</td>
+</tr>
+<tr><td bgcolor="#993300" style="color:White; font-size : small;" colspan="6">java.lang.IllegalStateException: java.lang.NoSuchMethodError: 'void org.apache.logging.log4j.util.PropertiesUtil.addPropertySource(org.apache.logging.log4j.util.PropertySource)'
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at com.rk.MiniProjectOfEmployeeApplication.main(MiniProjectOfEmployeeApplication.java:24)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;Caused by: java.lang.NoSuchMethodError: 'void org.apache.logging.log4j.util.PropertiesUtil.addPropertySource(org.apache.logging.log4j.util.PropertySource)'
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:222)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:335)
+<br />&nbsp;&nbsp;&nbsp;&nbsp;	... 19 more
+</td></tr>
+
+<tr>
+<td>1648</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter logger">org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter</td>
+<td>LoggingFailureAnalysisReporter.java:40</td>
+<td title="Message"><br /><br />***************************<br />APPLICATION FAILED TO START<br />***************************<br /><br />Description:<br /><br />An attempt was made to call a method that does not exist. The attempt was made from the following location:<br /><br />    org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:222)<br /><br />The following method did not exist:<br /><br />    'void org.apache.logging.log4j.util.PropertiesUtil.addPropertySource(org.apache.logging.log4j.util.PropertySource)'<br /><br />The calling method's class, org.springframework.boot.logging.log4j2.Log4J2LoggingSystem, was loaded from the following location:<br /><br />    jar:file:/C:/Users/ravia/.m2/repository/org/springframework/boot/spring-boot/3.3.0/spring-boot-3.3.0.jar!/org/springframework/boot/logging/log4j2/Log4J2LoggingSystem.class<br /><br />The called method's class, org.apache.logging.log4j.util.PropertiesUtil, is available from the following locations:<br /><br />    jar:file:/C:/Users/ravia/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar!/org/apache/logging/log4j/util/PropertiesUtil.class<br /><br />The called method's class hierarchy was loaded from the following locations:<br /><br />    org.apache.logging.log4j.util.PropertiesUtil: file:/C:/Users/ravia/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar<br /><br /><br />Action:<br /><br />Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.logging.log4j2.Log4J2LoggingSystem and org.apache.logging.log4j.util.PropertiesUtil<br /></td>
+</tr>
+
+<tr>
+<td>1652</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter logger">org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter</td>
+<td>LoggingFailureAnalysisReporter.java:40</td>
+<td title="Message"><br /><br />***************************<br />APPLICATION FAILED TO START<br />***************************<br /><br />Description:<br /><br />An attempt was made to call a method that does not exist. The attempt was made from the following location:<br /><br />    org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:222)<br /><br />The following method did not exist:<br /><br />    'void org.apache.logging.log4j.util.PropertiesUtil.addPropertySource(org.apache.logging.log4j.util.PropertySource)'<br /><br />The calling method's class, org.springframework.boot.logging.log4j2.Log4J2LoggingSystem, was loaded from the following location:<br /><br />    jar:file:/C:/Users/ravia/.m2/repository/org/springframework/boot/spring-boot/3.3.0/spring-boot-3.3.0.jar!/org/springframework/boot/logging/log4j2/Log4J2LoggingSystem.class<br /><br />The called method's class, org.apache.logging.log4j.util.PropertiesUtil, is available from the following locations:<br /><br />    jar:file:/C:/Users/ravia/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar!/org/apache/logging/log4j/util/PropertiesUtil.class<br /><br />The called method's class hierarchy was loaded from the following locations:<br /><br />    org.apache.logging.log4j.util.PropertiesUtil: file:/C:/Users/ravia/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar<br /><br /><br />Action:<br /><br />Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.logging.log4j2.Log4J2LoggingSystem and org.apache.logging.log4j.util.PropertiesUtil<br /></td>
+</tr>
